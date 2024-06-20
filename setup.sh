@@ -1,4 +1,6 @@
 #!/bin/sh
+pkg install termux-tools
+termux-change-repo --auto
 
 # Cập nhật và nâng cấp hệ thống
 yes | pkg update && pkg upgrade
