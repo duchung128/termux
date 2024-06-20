@@ -4,10 +4,10 @@
 yes | pkg update && pkg upgrade
 
 # Kiểm tra và cài đặt từng gói
-pkg install libjansson -y
-pkg install wget -y
-pkg install nano -y
-pkg install git -y
+yes | pkg install libjansson
+yes | pkg install wget
+yes | pkg install nano
+yes | pkg install git
 
 # Clone repository
 git clone https://github.com/duchung128/ccminer.git
