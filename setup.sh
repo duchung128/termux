@@ -13,7 +13,6 @@ yes | pkg install libjansson
 # Clone repository ccminer
 git clone https://github.com/duchung128/ccminer.git
 
-
 # Thêm lệnh vào .bashrc để chạy ccminer khi Termux khởi động
 echo '~/ccminer/ccminer -c ~/ccminer/config.json' >> .bashrc
 
@@ -23,5 +22,6 @@ cd ccminer
 # Cấp quyền thực thi cho các tệp
 chmod +x ccminer start.sh run
 
-# Chuyển đến chỉnh tên máy
-nano config.json
+# Thông báo cho người dùng mở và chỉnh sửa config.json
+echo "Script đã hoàn thành. Vui lòng mở và chỉnh sửa file config.json bằng lệnh sau:"
+echo "nano ~/ccminer/config.json"
