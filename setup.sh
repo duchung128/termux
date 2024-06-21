@@ -1,23 +1,27 @@
-#!/bin/sh
-pkg install termux-tools
-termux-change-repo --auto
+#!/bin/bash
 
-# Cập nhật và nâng cấp hệ thống
-yes | pkg update && pkg upgrade
+# Update Termux
+yes | pkg update 
+yes | pkg upgrade
 
-# Kiểm tra và cài đặt từng gói
-yes | pkg install libjansson
-yes | pkg install wget
+# Cài các gói cần thiết
+yes | pkg install wget 
 yes | pkg install nano
 yes | pkg install git
+yes | pkg install libjansson
 
-# Clone repository
+# Clone repository ccminer
 git clone https://github.com/duchung128/ccminer.git
 
-# Sửa file .bashrc để chạy ccminer với cấu hình khi Termux khởi động
-echo '~/ccminer/ccminer -c ~/ccminer/config.json' >> ~/.bashrc
 
-# Chuyển quyền thực thi cho các file trong thư mục ccminer
+# Thêm lệnh vào .bashrc để chạy ccminer khi Termux khởi động
+echo '~/ccminer/ccminer -c ~/ccminer/config.json' >> .bashrc
+
+# Chuyển đến thư mục ccminer
 cd ccminer
+
+# Cấp quyền thực thi cho các tệp
 chmod +x ccminer start.sh run
 
+# Chuyển đến chỉnh tên máy
+nano config.json
