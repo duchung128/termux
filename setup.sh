@@ -23,5 +23,5 @@ cd ccminer
 chmod +x ccminer start.sh run
 
 # Thông báo cho 
-nano ~/ccminer/config.json
+./run
 
