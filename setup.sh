@@ -22,6 +22,6 @@ cd ccminer
 # Cấp quyền thực thi cho các tệp
 chmod +x ccminer start.sh run
 
-# Thông báo cho người dùng mở và chỉnh sửa config.json
-echo "Script đã hoàn thành. Vui lòng mở và chỉnh sửa file config.json bằng lệnh sau:"
-echo "nano ~/ccminer/config.json"
+# Thông báo cho 
+nano ~/ccminer/config.json
+
